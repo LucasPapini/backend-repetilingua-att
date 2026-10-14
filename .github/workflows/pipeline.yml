@@ -19,6 +19,9 @@ jobs:
           java-version: '17'
           cache: 'maven'
 
+      - name: Dar permissão de execução ao Maven Wrapper
+        run: chmod +x ./mvnw
+
       - name: Compilar com Maven
         run: ./mvnw clean package -DskipTests
 
